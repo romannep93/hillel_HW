@@ -1,14 +1,9 @@
-def change_list():
-    user_input = input("Enter the list separated by commas: ")
-    user_list = user_input.split(",")
-
-    if len(user_list) < 2:
-        print("The list must contain at least 2 elements")
-    elif ' ' in user_list or '' in user_list and len(user_list) <=2:
+def change_list(lst):
+    if len(lst) < 2:
         print("The list must contain at least 2 elements")
     else:
-        user_list[0], user_list[-1] = user_list[-1], user_list[0]
-        print(user_list)
+        lst[0], lst[-1] = lst[-1], lst[0]
+        print(lst)
 
 
-change_list()
+change_list(["apple", "banana", "cherry"])
